@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sprunki GreenCore is a fan-made mod of Incredibox, offering a nature-inspired music creation experience. Create your own tracks with lush visuals and soothing sounds.">
+    <meta name="keywords" content="Sprunki GreenCore, Incredibox mod, music game, nature sounds, creative gaming, music creation, fan-made game">
+    <meta name="author" content="Sprunki GreenCore Team">
+    <meta property="og:title" content="Sprunki GreenCore - Nature-Inspired Music Creation">
+    <meta property="og:description" content="Play Sprunki GreenCore, a fan-made mod of Incredibox, and create your own nature-inspired music tracks. Explore lush visuals and soothing sounds today!">
+    <meta property="og:image" content="https://example.com/sprunki-greencore-thumbnail.jpg"> <!-- Replace with actual image URL -->
+    <meta property="og:url" content="https://sprunkigreen.online"> <!-- Replace with actual URL -->
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Sprunki GreenCore - Nature-Inspired Music Creation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Define CSS Variables for Themes */
+    :root {
+      --primary: #4caf50;
+      --secondary: #81c784;
+      --background: #0a1f1c;
+      --text: #e0f2f1;
+    }
+
+    /* Apply CSS Variables */
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .game-font {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .glow-button {
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .glow-button:hover {
+      box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+      transform: scale(1.05);
+    }
+
+    .game-frame {
+      border: 8px solid var(--primary);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(var(--primary), 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .game-frame:hover {
+      box-shadow: 0 0 40px rgba(var(--primary), 0.8);
+      transform: scale(1.02);
+    }
+
+    .pixel-box {
+      background: var(--background);
+      border: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 10px var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="py-6 shadow-lg" style="background-color: var(--primary);">
+    <div class="container mx-auto px-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold game-font" style="color: var(--text);">Sprunki GreenCore</h1>
+      <nav class="space-x-3">
+        <a href="#play" class="game-font" style="color: var(--text);">Play Now</a>
+        <a href="#about" class="game-font" style="color: var(--text);">Overview</a>
+        <a href="#videos" class="game-font" style="color: var(--text);">Videos</a>
+        <a href="#guide" class="game-font" style="color: var(--text);">Guide</a>
+        <a href="#reviews" class="game-font" style="color: var(--text);">Reviews</a>
+        <a href="#faq" class="game-font" style="color: var(--text);">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Game IFrame Section -->
+  <section id="play" class="py-12">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Play Sprunki GreenCore Online For Free</h1>
+      <p class="text-lg text-center max-w-4xl mx-auto mb-6">
+        Sprunki GreenCore is a nature-themed Incredibox mod featuring serene visuals, organic sounds, and interactive music creation for a calming, creative experience.
+      </p>
+      <div class="flex justify-center">
+        <div class="game-frame">
+          <iframe src="https://sprunki.org/sprunki-greencore.embed" width="1000" height="600" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <button class="glow-button text-white px-8 py-3 rounded-full game-font">Play Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game Description Section -->
+  <section id="about" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Overview Sprunki GreenCore</h2>
+      <p class="text-lg text-center max-w-4xl mx-auto">
+        Sprunki GreenCore is a fan-made mod of the popular Incredibox game, reimagining its core mechanics within a serene, nature-inspired aesthetic. This mod invites players to create music by combining various characters, each representing unique sounds that evoke the tranquility of the forest. With vibrant visuals featuring lush greenery and calming backgrounds, Sprunki GreenCore enhances the immersive experience, allowing players to feel as if they are surrounded by nature. The soundtrack is enriched with organic sounds—like rustling leaves and flowing water—complementing the gameplay and fostering creativity. Players can mix and match characters to unlock new sounds and animations, encouraging exploration and experimentation in their musical compositions. Overall, Sprunki GreenCore offers a fresh twist on the Incredibox universe, blending music creation with the beauty of the natural world.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gameplay Videos Section -->
+  <section id="videos" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Watch and Learn</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="pixel-box hover-glow">
+          <iframe src="https://www.youtube.com/watch?v=9ZlAZKs-rSQ" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+          <p class="mt-4 text-center">Sprunki Greencore/Incredibox Sprunki Overview</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <iframe src="https://www.youtube.com/watch?v=WDq0fXYRbKw" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+          <p class="mt-4 text-center">Incredibox Sprunki Greencore VS Original</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <iframe src="https://www.youtube.com/watch?v=A-HE5fi_L0M" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+          <p class="mt-4 text-center">Incredibox Sprunki VS Sprunki Greencore VS OG Greencore Mod</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gameplay Guide Section -->
+  <section id="guide" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">How to Play</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold mb-2">1. Select the Mod</h3>
+          <p>Choose Sprunki GreenCore from the available options.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold mb-2">2. Load the Game</h3>
+          <p>Click to enter the game and wait for it to load.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold mb-2">3. Choose Your Characters</h3>
+          <p>Browse and select characters with unique sounds.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold mb-2">4. Drag and Drop Sounds</h3>
+          <p>Drag characters onto the stage to create music.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold mb-2">5. Experiment with Combinations</h3>
+          <p>Mix and match characters for new sounds.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold mb-2">6. Record Your Creation</h3>
+          <p>Save your track using the record option.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Comments Section -->
+  <section id="reviews" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">What Players Are Saying</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="pixel-box hover-glow">
+          <p>Sprunki GreenCore is such a refreshing take on Incredibox! The nature theme is beautifully done.</p>
+          <!-- <div class="mt-4 flex items-center">
+            <button class="text-green-400 hover:text-green-300">👍 12</button>
+          </div> -->
+        </div>
+        <div class="pixel-box hover-glow">
+          <p>I love how easy it is to create music that sounds great! This mod really inspires creativity.</p>
+          <!-- <div class="mt-4 flex items-center">
+            <button class="text-green-400 hover:text-green-300">👍 8</button>
+          </div> -->
+        </div>
+        <div class="pixel-box hover-glow">
+            <p>The visuals are stunning, and I enjoy experimenting with different sound combinations.</p>
+            <!-- <div class="mt-4 flex items-center">
+              <button class="text-green-400 hover:text-green-300">👍 8</button>
+            </div> -->
+          </div>
+      </div>
+      <!-- <div class="mt-8">
+        <textarea class="w-full p-4 rounded-lg bg-gray-700 text-white" placeholder="Leave your comment..."></textarea>
+        <button class="mt-4 glow-button text-white px-6 py-2 rounded-lg game-font">Submit</button>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold">What is Sprunki GreenCore?</h3>
+          <p class="mt-2">Sprunki GreenCore is a fan-made mod of *Incredibox* that focuses on nature-inspired themes and soundscapes.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+          <h3 class="text-xl font-bold">How do I play Sprunki GreenCore?</h3>
+          <p class="mt-2">You can play by selecting characters and dragging them onto the stage to create music.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+            <h3 class="text-xl font-bold">Are there any costs associated with playing?</h3>
+            <p class="mt-2">No, Sprunki GreenCore is free to play online.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+            <h3 class="text-xl font-bold">Can I save my music creations?</h3>
+            <p class="mt-2">Yes, you can record your mixes within the game.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+            <h3 class="text-xl font-bold">What devices can I use to play this game?</h3>
+            <p class="mt-2">Sprunki GreenCore is playable on most devices with internet access through a web browser.</p>
+        </div>
+        <div class="pixel-box hover-glow">
+            <h3 class="text-xl font-bold">Is there a community for sharing creations?</h3>
+            <p class="mt-2">Yes, many players share their mixes online through various platforms and forums related to Incredibox.</p>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8" style="background-color: var(--primary);">
+    <div class="container mx-auto px-4 text-center">
+      <p class="game-font" style="color: var(--text);">&copy; 2023 Sprunki GreenCore. All rights reserved.</p>
+      <div class="mt-4 space-x-4">
+        <a href="#" class="game-font" style="color: var(--text);">Terms of Service</a>
+        <a href="#" class="game-font" style="color: var(--text);">Privacy Policy</a>
+        <a href="#" class="game-font" style="color: var(--text);">Contact Us</a>
+      </div>
+      <div class="mt-4 flex justify-center space-x-6">
+        <a href="#" class="game-font" style="color: var(--text);">Twitter</a>
+        <a href="#" class="game-font" style="color: var(--text);">Facebook</a>
+        <a href="#" class="game-font" style="color: var(--text);">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme Switcher -->
+  <div class="fixed bottom-4 right-4">
+    <button id="theme-switcher" class="glow-button text-white px-4 py-2 rounded-full game-font">Switch Theme</button>
+  </div>
+
+  <!-- JavaScript for Theme Switching and Persistence -->
+  <script>
+    const themes = {
+      nature: {
+        primary: "#4caf50",
+        secondary: "#81c784",
+        background: "#0a1f1c",
+        text: "#e0f2f1",
+      },
+      retro: {
+        primary: "#ff6f61",
+        secondary: "#ffcc00",
+        background: "#2d2d2d",
+        text: "#ffffff",
+      },
+      cyberpunk: {
+        primary: "#00ffcc",
+        secondary: "#ff00ff",
+        background: "#1a1a1a",
+        text: "#ffffff",
+      },
+    };
+
+    // Function to apply a theme
+    function applyTheme(theme) {
+      document.documentElement.style.setProperty("--primary", theme.primary);
+      document.documentElement.style.setProperty("--secondary", theme.secondary);
+      document.documentElement.style.setProperty("--background", theme.background);
+      document.documentElement.style.setProperty("--text", theme.text);
+    }
+
+    // Function to save the selected theme to local storage
+    function saveTheme(themeName) {
+      localStorage.setItem("selectedTheme", themeName);
+    }
+
+    // Function to load the saved theme from local storage
+    function loadTheme() {
+      const savedTheme = localStorage.getItem("selectedTheme") || "nature";
+      applyTheme(themes[savedTheme]);
+      return savedTheme;
+    }
+
+    // Initialize the theme
+    let currentTheme = loadTheme();
+
+    // Theme Switcher Logic
+    const themeSwitcher = document.getElementById("theme-switcher");
+    themeSwitcher.addEventListener("click", () => {
+      // Cycle through themes
+      const themeKeys = Object.keys(themes);
+      const nextThemeIndex = (themeKeys.indexOf(currentTheme) + 1) % themeKeys.length;
+      currentTheme = themeKeys[nextThemeIndex];
+
+      // Apply and save the new theme
+      applyTheme(themes[currentTheme]);
+      saveTheme(currentTheme);
+    });
+  </script>
+</body>
+</html>
