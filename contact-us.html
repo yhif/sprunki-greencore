@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us ｜ sprunkigreen.online</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <style>
+        :root {
+            --primary: #4caf50;
+            --secondary: #81c784;
+            --background: #0a1f1c;
+            --text: #e0f2f1;
+        }
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Roboto', sans-serif;
+        }
+        .game-font {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .pixel-box {
+            background: var(--background);
+            border: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .form-input {
+            background-color: var(--background);
+            border: 2px solid var(--primary);
+            color: var(--text);
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <header class="py-6 shadow-lg" style="background-color: var(--primary);">
+        <div class="container mx-auto px-3">
+            <h1 class="text-2xl font-bold game-font" style="color: var(--text);">Contact Us</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="pixel-box">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 game-font">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold">Email</h4>
+                            <p>support@sprunkigreen.online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8" style="background-color: var(--primary);">
+        <div class="container mx-auto px-4 text-center">
+          <p class="game-font" style="color: var(--text);">&copy; 2025 Sprunki GreenCore. All rights reserved.</p>
+          <div class="mt-4 space-x-4">
+            <a href="terms-of-service.html" class="game-font" style="color: var(--text);margin-right: 1rem;">Terms of Service</a>
+            <a href="privacy-policy.html" class="game-font" style="color: var(--text);margin-right: 1rem;">Privacy Policy</a>
+            <a href="contact-us.html" class="game-font" style="color: var(--text);">Contact Us</a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
