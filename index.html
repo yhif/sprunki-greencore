@@ -97,11 +97,6 @@
         <a href="#guide" class="game-font" style="color: var(--text);">Guide</a>
         <a href="#reviews" class="game-font" style="color: var(--text);">Reviews</a>
         <a href="#faq" class="game-font" style="color: var(--text);">FAQ</a>
-        <select id="language-select" class="game-font bg-transparent border-none" style="color: var(--text);">
-          <option value="index.html">English</option>
-          <option value="index-ko.html">한국어</option>
-          <option value="index-es.html">Español</option>
-        </select>
       </nav>
     </div>
   </header>
@@ -195,27 +190,14 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="pixel-box hover-glow">
           <p>Sprunki GreenCore is such a refreshing take on Incredibox! The nature theme is beautifully done.</p>
-          <!-- <div class="mt-4 flex items-center">
-            <button class="text-green-400 hover:text-green-300">👍 12</button>
-          </div> -->
         </div>
         <div class="pixel-box hover-glow">
           <p>I love how easy it is to create music that sounds great! This mod really inspires creativity.</p>
-          <!-- <div class="mt-4 flex items-center">
-            <button class="text-green-400 hover:text-green-300">👍 8</button>
-          </div> -->
         </div>
         <div class="pixel-box hover-glow">
             <p>The visuals are stunning, and I enjoy experimenting with different sound combinations.</p>
-            <!-- <div class="mt-4 flex items-center">
-              <button class="text-green-400 hover:text-green-300">👍 8</button>
-            </div> -->
           </div>
       </div>
-      <!-- <div class="mt-8">
-        <textarea class="w-full p-4 rounded-lg bg-gray-700 text-white" placeholder="Leave your comment..."></textarea>
-        <button class="mt-4 glow-button text-white px-6 py-2 rounded-lg game-font">Submit</button>
-      </div> -->
     </div>
   </section>
 
@@ -267,6 +249,11 @@
         <a href="#" class="game-font" style="color: var(--text);">Facebook</a>
         <a href="#" class="game-font" style="color: var(--text);">Instagram</a>
       </div>
+      <div class="mt-6 flex justify-center space-x-4">
+        <a href="index.html" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">English</a>
+        <a href="index-ko.html" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">한국어</a>
+        <a href="index-es.html" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">Español</a>
+      </div>
     </div>
   </footer>
 
@@ -298,47 +285,4 @@
       },
     };
 
-    // Function to apply a theme
-    function applyTheme(theme) {
-      document.documentElement.style.setProperty("--primary", theme.primary);
-      document.documentElement.style.setProperty("--secondary", theme.secondary);
-      document.documentElement.style.setProperty("--background", theme.background);
-      document.documentElement.style.setProperty("--text", theme.text);
-    }
-
-    // Function to save the selected theme to local storage
-    function saveTheme(themeName) {
-      localStorage.setItem("selectedTheme", themeName);
-    }
-
-    // Function to load the saved theme from local storage
-    function loadTheme() {
-      const savedTheme = localStorage.getItem("selectedTheme") || "nature";
-      applyTheme(themes[savedTheme]);
-      return savedTheme;
-    }
-
-    // Initialize the theme
-    let currentTheme = loadTheme();
-
-    // Theme Switcher Logic
-    const themeSwitcher = document.getElementById("theme-switcher");
-    themeSwitcher.addEventListener("click", () => {
-      // Cycle through themes
-      const themeKeys = Object.keys(themes);
-      const nextThemeIndex = (themeKeys.indexOf(currentTheme) + 1) % themeKeys.length;
-      currentTheme = themeKeys[nextThemeIndex];
-
-      // Apply and save the new theme
-      applyTheme(themes[currentTheme]);
-      saveTheme(currentTheme);
-    });
-  </script>
-  <script>
-    // Language selector functionality
-    document.getElementById('language-select').addEventListener('change', function() {
-      window.location.href = this.value;
-    });
-  </script>
-</body>
-</html>
+    // Function to apply a
