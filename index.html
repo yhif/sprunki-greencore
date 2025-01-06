@@ -97,6 +97,11 @@
         <a href="#guide" class="game-font" style="color: var(--text);">Guide</a>
         <a href="#reviews" class="game-font" style="color: var(--text);">Reviews</a>
         <a href="#faq" class="game-font" style="color: var(--text);">FAQ</a>
+        <select id="language-select" class="game-font bg-transparent border-none" style="color: var(--text);">
+          <option value="index.html">English</option>
+          <option value="index-ko.html">한국어</option>
+          <option value="index-es.html">Español</option>
+        </select>
       </nav>
     </div>
   </header>
@@ -327,6 +332,12 @@
       // Apply and save the new theme
       applyTheme(themes[currentTheme]);
       saveTheme(currentTheme);
+    });
+  </script>
+  <script>
+    // Language selector functionality
+    document.getElementById('language-select').addEventListener('change', function() {
+      window.location.href = this.value;
     });
   </script>
 </body>
