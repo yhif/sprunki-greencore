@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sprunki GreenCore is a fan-made mod of Incredibox, offering a nature-inspired music creation experience. Create your own tracks with lush visuals and soothing sounds.">
-    <meta name="keywords" content="Sprunki GreenCore, Incredibox mod, music game, nature sounds, creative gaming, music creation, fan-made game">
+    <title>Sprunki GreenCore: Create Nature-Inspired Music with Incredibox | sprunkigreen.online</title>
+    <meta name="description" content="Sprunki GreenCore is a unique, nature-inspired modification of Incredibox, where players can immerse themselves in a serene, forest-themed environment while creating music. This mod transforms the experience with lush visuals and organic sounds, allowing for a harmonious blend of creativity and nature. Explore the enchanting world of Sprunki GreenCore and let your musical imagination flourish amidst the green!">
+    <meta name="keywords" content="Sprunki GreenCore, Incredibox mod, nature-inspired music, forest-themed music creation, Sprunki, music game, eco-friendly music app, music creation with nature, green-themed Incredibox, environmental music mod">
     <meta name="author" content="Sprunki GreenCore Team">
-    <meta property="og:title" content="Sprunki Green:Play Sprunki GreenCore Online | sprunkigreen.online">
-    <meta property="og:description" content="Create calming music with Sprunki GreenCore, a nature-themed Incredibox mod featuring serene visuals and organic sounds. Play for free online!">
+    <meta property="og:title" content="Sprunki GreenCore: Create Nature-Inspired Music with Incredibox | sprunkigreen.online">
+    <meta property="og:description" content="Sprunki GreenCore is a unique, nature-inspired modification of Incredibox, where players can immerse themselves in a serene, forest-themed environment while creating music. This mod transforms the experience with lush visuals and organic sounds, allowing for a harmonious blend of creativity and nature. Explore the enchanting world of Sprunki GreenCore and let your musical imagination flourish amidst the green!">
     <meta property="og:image" content="/apple-touch-icon.png"> <!-- Replace with actual image URL -->
     <meta property="og:url" content="https://sprunkigreen.online"> <!-- Replace with actual URL -->
     <meta name="twitter:card" content="summary_large_image">
-    <title>Sprunki Green:Play Sprunki GreenCore Online | sprunkigreen.online</title>
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,292 +29,645 @@
 
       gtag('config', 'G-4XJDQPHXK4');
     </script>
-  <style>
-    /* Define CSS Variables for Themes */
-    :root {
-      --primary: #4caf50;
-      --secondary: #81c784;
-      --background: #0a1f1c;
-      --text: #e0f2f1;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      nav {
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-      }
-
-      .game-frame iframe {
-        width: 100%;
-        height: 400px;
-      }
-
-      .grid-cols-3 {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .grid-cols-2 {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .text-lg {
-        font-size: 1rem;
-      }
-
-      .text-3xl {
-        font-size: 1.5rem;
-      }
-
-      .py-12 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-      }
-
-      footer .flex {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-    }
-
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .game-frame iframe {
-        width: 800px;
-        height: 500px;
-      }
-
-      .grid-cols-3 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Apply CSS Variables */
-    body {
-      background-color: var(--background);
-      color: var(--text);
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .game-font {
-      font-family: 'Press Start 2P', cursive;
-    }
-
-    .glow-button {
-      background: linear-gradient(45deg, var(--primary), var(--secondary));
-      box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
-      transition: all 0.3s ease;
-    }
-
-    .glow-button:hover {
-      box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
-      transform: scale(1.05);
-    }
-
-    .game-frame {
-      border: 8px solid var(--primary);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(var(--primary), 0.5);
-      transition: all 0.3s ease;
-    }
-
-    .game-frame:hover {
-      box-shadow: 0 0 40px rgba(var(--primary), 0.8);
-      transform: scale(1.02);
-    }
-
-    .pixel-box {
-      background: var(--background);
-      border: 4px solid var(--primary);
-      border-radius: 8px;
-      padding: 1.5rem;
-    }
-
-    .hover-glow:hover {
-      box-shadow: 0 0 10px var(--primary);
-    }
-  </style>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4ade80, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
-<body>
-  <!-- Header -->
-  <header class="py-6 shadow-lg" style="background-color: var(--primary);">
-    <div class="container mx-auto px-3 flex justify-between items-center">
-      <h1 class="text-2xl font-bold game-font" style="color: var(--text);">Sprunki GreenCore</h1>
-      <nav class="space-x-3">
-        <a href="#play" class="game-font" style="color: var(--text);">Play Now</a>
-        <a href="#about" class="game-font" style="color: var(--text);">Overview</a>
-        <a href="#videos" class="game-font" style="color: var(--text);">Videos</a>
-        <a href="#guide" class="game-font" style="color: var(--text);">Guide</a>
-        <a href="#reviews" class="game-font" style="color: var(--text);">Reviews</a>
-        <a href="#faq" class="game-font" style="color: var(--text);">FAQ</a>
-      </nav>
-    </div>
-  </header>
+<body class="bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 text-white min-h-screen">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">Sprunki GreenCore</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#play" class="hover:text-green-400 transition">Play Now</a>
+                <a href="#features" class="hover:text-green-400 transition">Features</a>
+                <a href="#how-to-play" class="hover:text-green-400 transition">How to Play</a>
+                <a href="#about" class="hover:text-green-400 transition">About</a>
+            </div>
+            <button class="md:hidden text-green-400" onclick="document.getElementById('mobile-menu').classList.remove('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
 
-  <!-- Game IFrame Section -->
-  <section id="play" class="py-12">
-    <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Play Sprunki GreenCore Online For Free</h1>
-      <p class="text-lg text-center max-w-4xl mx-auto mb-6">
-        Sprunki GreenCore is a nature-themed Incredibox mod featuring serene visuals, organic sounds, and interactive music creation for a calming, creative experience.
-      </p>
-      <div class="flex justify-center">
-        <div class="game-frame">
-          <iframe src="https://sprunki.org/sprunki-greencore.embed" width="1000" height="600" frameborder="0"></iframe>
-        </div>
-      </div>
-      <div class="text-center mt-6">
-        <button class="glow-button text-white px-8 py-3 rounded-full game-font">Play Now</button>
-      </div>
-    </div>
-  </section>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">
+                Play Sprunki GreenCore Online For Free
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Sprunki GreenCore is a fan-made modification of the original Incredibox game. It reimagines the game with a focus on nature, incorporating a forest-themed aesthetic.
+            </p>
+            <a href="#play" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 px-8 py-4 rounded-lg text-lg font-bold hover:opacity-90 transition float">
+                Play Now
+            </a>
+        </section>
 
-  <!-- Game Description Section -->
-  <section id="about" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Overview Sprunki GreenCore</h2>
-      <p class="text-lg text-center max-w-4xl mx-auto">
-        Sprunki GreenCore is a fan-made mod of the popular Incredibox game, reimagining its core mechanics within a serene, nature-inspired aesthetic. This mod invites players to create music by combining various characters, each representing unique sounds that evoke the tranquility of the forest. With vibrant visuals featuring lush greenery and calming backgrounds, Sprunki GreenCore enhances the immersive experience, allowing players to feel as if they are surrounded by nature. The soundtrack is enriched with organic sounds—like rustling leaves and flowing water—complementing the gameplay and fostering creativity. Players can mix and match characters to unlock new sounds and animations, encouraging exploration and experimentation in their musical compositions. Overall, Sprunki GreenCore offers a fresh twist on the Incredibox universe, blending music creation with the beauty of the natural world.
-      </p>
-    </div>
-  </section>
+        <!-- Game Section -->
+        <section id="play" class="container mx-auto px-4 py-8">
+            <div class="bg-black/30 rounded-xl overflow-hidden shadow-2xl">
+                <div id="iframe-placeholder" class="w-full aspect-video flex flex-col items-center justify-between py-12 bg-green-900/30 cursor-pointer relative">
+                    <!-- Add cover image -->
+                    <img src="img/sprunki-greencore.avif" 
+                         alt="Sprunki GreenCore Cover" 
+                         class="w-3/5 object-contain">
+                    <!-- Play button -->
+                    <div class="text-center relative z-10 bg-black/50 px-12 py-6 rounded-xl backdrop-blur-sm mt-8">
+                        <button class="text-xl font-bold text-green-400 hover:text-green-300 transition-colors">
+                            Play Now
+                        </button>
+                    </div>
+                </div>
+                <iframe id="game-iframe" src="about:blank" class="w-full aspect-video hidden" frameborder="0"></iframe>
+            </div>
+        </section>
 
-  <!-- Gameplay Videos Section -->
-  <section id="videos" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Watch and Learn</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="pixel-box hover-glow">
-          <iframe src="https://www.youtube.com/embed/w3-uB_nvChQ?si=m2BULB6Mw-hC4pJL" title="Sprunki Greencore Overview" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
-          <p class="mt-4 text-center">Sprunki GreenCore Overview</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <iframe src="https://www.youtube.com/embed/WDq0fXYRbKw?si=OnaI_KMZiThatDsb" title="Incredibox Sprunki Greencore VS Original" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
-          <p class="mt-4 text-center">Incredibox Sprunki Greencore VS Original</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <iframe src="https://www.youtube.com/embed/9ZlAZKs-rSQ?si=r0caEep51OrA0N5W" title="Incredibox Sprunki Greencore Gameplay Showcase" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
-          <p class="mt-4 text-center">Incredibox Sprunki Greencore Gameplay Showcase</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">About Sprunki GreenCore</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Left Column: Main Description -->
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Overview</h3>
+                        <p class="text-gray-300">
+                            Sprunki GreenCore is a fan-made modification of Incredibox that reimagines the game with a focus on nature and sustainability. Through its distinctive green-inspired theme, players are immersed in a forest-like environment while creating music.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Gameplay</h3>
+                        <p class="text-gray-300">
+                            Using the familiar drag-and-drop gameplay, you can combine characters representing eco-friendly concepts like recycling, solar power, and wildlife conservation. Each character emits unique sounds that blend together to create an atmospheric soundtrack reminiscent of an enchanted forest.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Features & Visuals -->
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Visual Design</h3>
+                        <p class="text-gray-300">
+                            The mod features vibrant visuals with lush greenery, flowing rivers, and other natural elements, creating a surreal yet earthy aesthetic that perfectly balances musical creativity with environmental themes.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Key Elements</h3>
+                        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                            <li>Nature-inspired sound effects</li>
+                            <li>Environmental character designs</li>
+                            <li>Forest-themed animations</li>
+                            <li>Eco-friendly visual elements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Gameplay Guide Section -->
-  <section id="guide" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">How to Play</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">1. Select the Mod</h3>
-          <p>Choose Sprunki GreenCore from the available options.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">2. Load the Game</h3>
-          <p>Click to enter the game and wait for it to load.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">3. Choose Your Characters</h3>
-          <p>Browse and select characters with unique sounds.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">4. Drag and Drop Sounds</h3>
-          <p>Drag characters onto the stage to create music.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">5. Experiment with Combinations</h3>
-          <p>Mix and match characters for new sounds.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">6. Record Your Creation</h3>
-          <p>Save your track using the record option.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- Why Play Section -->
+        <section class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Why Play Sprunki GreenCore?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Fresh Experience</h3>
+                    <p class="text-gray-300">Experience a new visual and auditory twist on the classic Incredibox gameplay, offering something unique and exciting.</p>
+                </div>
 
-  <!-- User Comments Section -->
-  <section id="reviews" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">What Players Are Saying</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="pixel-box hover-glow">
-          <p>Sprunki GreenCore is such a refreshing take on Incredibox! The nature theme is beautifully done.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <p>I love how easy it is to create music that sounds great! This mod really inspires creativity.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-            <p>The visuals are stunning, and I enjoy experimenting with different sound combinations.</p>
-          </div>
-      </div>
-    </div>
-  </section>
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Creative Exploration</h3>
+                    <p class="text-gray-300">Perfect for players who love experimenting with a wide range of sounds and rhythms to craft their own unique compositions.</p>
+                </div>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: var(--text);">Frequently Asked Questions</h2>
-      <div class="space-y-4">
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">What is Sprunki GreenCore?</h3>
-          <p class="mt-2">Sprunki GreenCore is a fan-made mod of *Incredibox* that focuses on nature-inspired themes and soundscapes.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">How do I play Sprunki GreenCore?</h3>
-          <p class="mt-2">You can play by selecting characters and dragging them onto the stage to create music.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-            <h3 class="text-xl font-bold">Are there any costs associated with playing?</h3>
-            <p class="mt-2">No, Sprunki GreenCore is free to play online.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-            <h3 class="text-xl font-bold">Can I save my music creations?</h3>
-            <p class="mt-2">Yes, you can record your mixes within the game.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-            <h3 class="text-xl font-bold">What devices can I use to play this game?</h3>
-            <p class="mt-2">Sprunki GreenCore is playable on most devices with internet access through a web browser.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-            <h3 class="text-xl font-bold">Is there a community for sharing creations?</h3>
-            <p class="mt-2">Yes, many players share their mixes online through various platforms and forums related to Incredibox.</p>
-        </div>  
-      </div>
-    </div>
-  </section>
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Immersive Atmosphere</h3>
+                    <p class="text-gray-300">Feel transported to a mystical forest with our lush, green theme that creates an enchanting gaming experience.</p>
+                </div>
 
-  <!-- Footer -->
-  <footer class="py-8" style="background-color: var(--primary);">
-    <div class="container mx-auto px-4 text-center">
-      <p class="game-font" style="color: var(--text);">&copy; 2025 Sprunki Green. All rights reserved.</p>
-      <div class="mt-4 space-x-8">
-        <a href="/" class="game-font inline-block" style="color: var(--text);margin-right: 1rem;">sprunkigreen.online</a>
-        <a href="terms-of-service.html" class="game-font inline-block" style="color: var(--text);">Terms of Service</a>
-        <a href="privacy-policy.html" class="game-font inline-block" style="color: var(--text);">Privacy Policy</a>
-        <a href="contact-us.html" class="game-font inline-block" style="color: var(--text);">Contact Us</a>
-      </div>
-      <div class="mt-4 flex justify-center space-x-6">
-        <a href="#" class="game-font" style="color: var(--text);">Twitter</a>
-        <a href="#" class="game-font" style="color: var(--text);">Facebook</a>
-        <a href="#" class="game-font" style="color: var(--text);">Instagram</a>
-      </div>
-      <div class="mt-6 flex justify-center space-x-4">
-        <a href="/" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">English</a>
-        <a href="index-ko.html" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">한국어</a>
-        <a href="index-es.html" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">Español</a>
-        <a href="index-ar.html" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">العربية</a>
-        <a href="index-pt.html" class="game-font px-4 py-2 rounded-lg hover:bg-green-700" style="color: var(--text);">Português</a>
-      </div>
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Innovative Design</h3>
+                    <p class="text-gray-300">Enjoy unique visual elements and nature-inspired sounds that add a new dimension to the classic gameplay.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Engaging Aesthetic</h3>
+                    <p class="text-gray-300">Perfect for those who appreciate creativity and originality in gaming with our standout visual style.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Unique Theme</h3>
+                    <p class="text-gray-300">Experience a distinctive blend of nature themes that creates a surreal yet grounded gaming atmosphere.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Atmospheric Engagement</h3>
+                    <p class="text-gray-300">Take a break from the norm with our visually stunning interface and immersive environmental design.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3 gradient-text">Music Creation</h3>
+                    <p class="text-gray-300">Explore your music-making skills in an otherworldly green environment that inspires creativity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Games Section -->
+        <section class="container mx-auto px-4 py-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold gradient-text">Popular Games</h2>
+                <!-- <a href="#" class="text-green-400 hover:text-green-300 flex items-center">
+                    View All
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a> -->
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://sprunki-games.online/" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="img/sprunki-incredibox.avif">
+                        <span class="absolute top-2 right-2 bg-green-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki Incredibox</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">2.5K Playing</p>
+                        <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+
+                <a href="https://sprunki-games.online/" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="img/sprunki-retake.avif">
+                        <span class="absolute top-2 right-2 bg-green-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki Retake</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">2.1K Playing</p>
+                        <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+
+                <a href="/sprunki-green-gang/index.html" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="img/sprunki-green-gang.avif">
+                        <span class="absolute top-2 right-2 bg-green-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki Green Gang</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">1.8K Playing</p>
+                        <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+
+                <a href="https://sprunki-games.online/" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="img/PADEK-MAN-GREENCORE.avif">
+                        <span class="absolute top-2 right-2 bg-green-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki Greencore: Padek Man</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">1.5K Playing</p>
+                        <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Key Features</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Nature-Inspired Sounds</h3>
+                    <p class="text-gray-300">Experience organic sounds from rustling leaves to flowing water, creating a unique environmental symphony that transports you to a peaceful forest.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Eco-Themed Visuals</h3>
+                    <p class="text-gray-300">Immerse yourself in a vibrant green world with characters representing environmental themes, bringing nature's beauty to life.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Interactive Bonuses</h3>
+                    <p class="text-gray-300">Discover hidden combinations that unlock special animations and environmental effects, adding an extra layer of excitement to your music creation.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dynamic Mixing</h3>
+                    <p class="text-gray-300">Create endless musical combinations with our intuitive mixing system, where every character interaction produces harmonious nature-inspired sounds.</p>
+                </div>
+            </div>
+        
+            <!-- Additional Features -->
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Environmental Impact</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Raises awareness about environmental conservation
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Promotes sustainable thinking through gameplay
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Connects players with nature through music
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Creative Freedom</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Unlimited mixing possibilities
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Save and share your creations
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Personalize your musical experience
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Testimonials -->
+        <section class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Community Testimonials</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Emily Johnson -->
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Emily Johnson</h3>
+                            <p class="text-sm text-green-400">Game Enthusiast</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Sprunki GreenCore takes the beloved Incredibox and transports it into a vibrant forest world. The nature-inspired elements are beautifully integrated, creating a serene and immersive gaming experience. I love how it encourages creativity while promoting an appreciation for nature!</p>
+                </div>
+
+                <!-- Michael Smith -->
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Michael Smith</h3>
+                            <p class="text-sm text-green-400">Game Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">As a developer, I appreciate the creativity behind Sprunki GreenCore. It maintains the core mechanics of Incredibox while adding a unique forest theme that is visually stunning. It's a fresh take that gives the original game a delightful twist.</p>
+                </div>
+
+                <!-- Sophia Lee -->
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Sophia Lee</h3>
+                            <p class="text-sm text-green-400">Music Lover</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">The music in Sprunki GreenCore is fantastic! The combination of nature sounds with the iconic Incredibox beats creates a relaxing atmosphere. It's an innovative way to enjoy music while being surrounded by a beautiful forest setting.</p>
+                </div>
+
+                <!-- David Brown -->
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">David Brown</h3>
+                            <p class="text-sm text-green-400">Outdoor Advocate</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">I love how Sprunki GreenCore inspires players to connect with nature. The design is whimsical and encourages exploration, making it a perfect educational tool for young minds. It's a fun way to foster an appreciation for the environment!</p>
+                </div>
+
+                <!-- Laura Wilson -->
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">Laura Wilson</h3>
+                            <p class="text-sm text-green-400">Graphic Designer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">The graphics in Sprunki GreenCore are absolutely stunning! The forest-themed aesthetic is not only beautiful but also unique compared to other mods. It shows how much thought went into creating a captivating experience that highlights nature's beauty.</p>
+                </div>
+
+                <!-- James Anderson -->
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">James Anderson</h3>
+                            <p class="text-sm text-green-400">Casual Gamer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Sprunki GreenCore redefines what I thought about modifications! The blend of nature with the classic gameplay of Incredibox is refreshing. It keeps me engaged while providing a peaceful and enjoyable gaming atmosphere. Highly recommended!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">How to Play</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Select Your Beat</h3>
+                    <p class="text-gray-300">Start with a base rhythm by choosing from our nature-inspired beat characters. These form the foundation of your mix.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Add Melodies</h3>
+                    <p class="text-gray-300">Layer melodic elements by dragging forest-themed characters onto the stage. Each character adds unique nature sounds to your composition.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mix & Match</h3>
+                    <p class="text-gray-300">Experiment with different combinations of characters. Try removing or adding elements to create your perfect environmental symphony.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Discover Bonuses</h3>
+                    <p class="text-gray-300">Find special combinations to unlock magical animations and bonus tracks. Each discovery adds new elements to your forest masterpiece.</p>
+                </div>
+            </div>
+        
+            <!-- Additional Tips -->
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Pro Tips</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Start with rhythm characters to build a solid foundation
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Mix different character types for richer compositions
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Listen carefully to how sounds blend together
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="bg-white/5 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Controls</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                            </svg>
+                            Click and drag characters to add them to your mix
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                            </svg>
+                            Click on active characters to remove them
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                            </svg>
+                            Use the record button to save your favorite mixes
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">What is Sprunki GreenCore?</h3>
+                    <p class="text-gray-300">Sprunki GreenCore is a fun and creative game made by fans of Incredibox. It has a nature theme, allowing players to create music using sounds from the forest, like rustling leaves and flowing water. It's designed to make you feel calm while making music.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">How do I start playing Sprunki GreenCore?</h3>
+                    <p class="text-gray-300">To start playing Sprunki GreenCore, first choose the game on the website. Then, click to load the game, pick your favorite characters, and drag them onto the stage to make your own music.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">Can I play Sprunki GreenCore for free?</h3>
+                    <p class="text-gray-300">Yes! You can play Sprunki GreenCore online without any cost. It's completely free, so anyone can jump in and start creating music right away.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">How can I save my music creations?</h3>
+                    <p class="text-gray-300">If you create a wonderful music mix in Sprunki GreenCore, you can save it. There’s a record option in the game that lets you keep your track so you can listen to it later.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">What devices can I use to play this game?</h3>
+                    <p class="text-gray-300">You can enjoy playing Sprunki GreenCore on many devices! As long as you have an internet connection and a web browser, you can access the game on computers, tablets, or smartphones.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">Is there a place to share my music with others?</h3>
+                    <p class="text-gray-300">Absolutely! Many players who enjoy Sprunki GreenCore share their music creations on different online platforms and forums related to Incredibox. You can join the fun and share your mixes there!</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">What kind of sounds can I create in Sprunki GreenCore?</h3>
+                    <p class="text-gray-300">In Sprunki GreenCore, you can create music using a variety of nature-inspired sounds. The game features characters that each produce different sounds, allowing for lots of combinations to explore.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">Can kids play Sprunki GreenCore?</h3>
+                    <p class="text-gray-300">Yes, Sprunki GreenCore is suitable for kids! It’s easy to understand and encourages creativity, making it a great choice for children to express themselves through music.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">What makes Sprunki GreenCore different from other games?</h3>
+                    <p class="text-gray-300">Sprunki GreenCore stands out because of its nature theme and calming atmosphere. While you make music, you'll feel like you’re in a peaceful forest, which is quite different from many other games.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">Are there tutorials to help me learn how to play?</h3>
+                    <p class="text-gray-300">Yes, Sprunki GreenCore offers guides to help beginners learn how to play. You can follow the steps provided to understand how to create music easily, making it accessible for everyone.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-xl p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Create?</h2>
+                <p class="text-xl text-gray-300 mb-8">Start your musical journey with Sprunki GreenCore today.</p>
+                <a href="#play" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 px-8 py-4 rounded-lg text-lg font-bold hover:opacity-90 transition">
+                    Play Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-50 hidden">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-end mb-8">
+                <button class="text-gray-400 hover:text-white" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-center text-xl">
+                <a href="#play" class="text-gray-400 hover:text-green-400 transition">Play Now</a>
+                <a href="#features" class="text-gray-400 hover:text-green-400 transition">Features</a>
+                <a href="#how-to-play" class="text-gray-400 hover:text-green-400 transition">How to Play</a>
+                <a href="#about" class="text-gray-400 hover:text-green-400 transition">About</a>
+            </nav>
+        </div>
     </div>
-  </footer>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex flex-wrap justify-center gap-4 text-gray-400">
+                    <a href="/privacy-policy.html" class="hover:text-green-400 transition">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="/terms-of-service.html" class="hover:text-green-400 transition">Terms of Service</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="/contact.html" class="hover:text-green-400 transition">Contact Us</a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+                    <a href="/" class="hover:text-green-400 transition">English</a>
+                    <a href="/index-ko.html" class="hover:text-green-400 transition">한국어</a>
+                    <a href="/index-es.html" class="hover:text-green-400 transition">Español</a>
+                    <a href="/index-ar.html" class="hover:text-green-400 transition">日本語</a>
+                    <a href="/index-pt.html" class="hover:text-green-400 transition">中文</a>
+                </div>
+                <p class="text-gray-400">&copy; 2025 Sprunki GreenCore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Close mobile menu when clicking navigation links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Lazy load iframe
+        document.getElementById('iframe-placeholder').addEventListener('click', function() {
+            const iframe = document.getElementById('game-iframe');
+            iframe.src = 'https://wowtbc.net/sprunkin/greencore2/index.html';
+            iframe.classList.remove('hidden');
+            this.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
