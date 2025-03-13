@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprunki Sprunmbox: Create Music with Incredibox | sprunkibox.online</title>
+    <meta name="description" content="Sprunki Sprunmbox is an innovative modification of Incredibox, offering players a unique musical experience with custom beats and rhythms. Create, mix, and share your musical masterpieces in this engaging and creative environment.">
+    <meta name="keywords" content="Sprunki Sprunmbox, Incredibox mod, music creation, beat making, Sprunki, music game, rhythm game, music creation app, custom music mod">
+    <meta name="author" content="Sprunki Team">
+    <meta property="og:title" content="Sprunki Sprunmbox: Create Music with Incredibox | sprunkibox.online">
+    <meta property="og:description" content="Sprunki Sprunmbox is an innovative modification of Incredibox, offering players a unique musical experience with custom beats and rhythms. Create, mix, and share your musical masterpieces in this engaging and creative environment.">
+    <meta property="og:image" content="/apple-touch-icon.png">
+    <meta property="og:url" content="https://sprunkibox.online">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2682010394958299"
+     crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XJDQPHXK4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4XJDQPHXK4');
+    </script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white min-h-screen">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">Sprunki Sprunmbox</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#play" class="hover:text-indigo-400 transition">Play Now</a>
+                <a href="#features" class="hover:text-indigo-400 transition">Features</a>
+                <a href="#how-to-play" class="hover:text-indigo-400 transition">How to Play</a>
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+            </div>
+            <button class="md:hidden text-indigo-400" onclick="document.getElementById('mobile-menu').classList.remove('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">
+                Play Sprunki Sprunmbox Online For Free
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Sprunki Sprunmbox is a creative modification of Incredibox, featuring unique sounds and innovative musical elements. Mix, create, and share your musical masterpieces in this engaging rhythm game.
+            </p>
+            <a href="#play" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 px-8 py-4 rounded-lg text-lg font-bold hover:opacity-90 transition float">
+                Play Now
+            </a>
+        </section>
+
+        <!-- Game Section -->
+        <section id="play" class="container mx-auto px-4 py-8">
+            <div class="bg-black/30 rounded-xl overflow-hidden shadow-2xl">
+                <div id="iframe-placeholder" class="w-full aspect-video flex flex-col items-center justify-between py-12 bg-indigo-900/30 cursor-pointer relative">
+                    <!-- Add cover image -->
+                    <img src="/img/sprunki-sprunmbox.avif" 
+                         alt="Sprunki Sprunmbox Cover" 
+                         class="w-3/5 object-contain">
+                    <!-- Play button -->
+                    <div class="text-center relative z-10 bg-black/50 px-12 py-6 rounded-xl backdrop-blur-sm mt-8">
+                        <button class="text-xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
+                            Play Now
+                        </button>
+                    </div>
+                </div>
+                <iframe id="game-iframe" src="about:blank" class="w-full aspect-video hidden" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- Popular Games Section -->
+        <section class="container mx-auto px-4 py-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold gradient-text">Popular Games</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://sprunki-games.online" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="/img/sprunki-incredibox.avif">
+                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki Incredibox</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">2.5K Playing</p>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+
+                <a href="https://sprunki-games.online/sprunki-retake" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="/img/sprunki-retake.avif">
+                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki Retake</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">2.1K Playing</p>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+
+                <a href="/sprunki-greencore" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="/img/sprunki-greencore.avif">
+                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki GreenCore</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">1.8K Playing</p>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+
+                <a href="/sprunki-green-gang" class="bg-white/5 rounded-lg p-3 game-card">
+                    <div class="relative">
+                        <img src="/img/sprunki-green-gang.avif">
+                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1">Sprunki Green Gang</h3>
+                    <div class="flex justify-between items-center">
+                        <p class="text-xs text-gray-400">1.5K Playing</p>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">About Sprunki Sprunmbox</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Overview</h3>
+                        <p class="text-gray-300">
+                            Sprunki Sprunmbox is an innovative modification of Incredibox that brings fresh sounds and creative musical elements to the game. Players can explore new rhythms and create unique compositions in an engaging environment.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Gameplay</h3>
+                        <p class="text-gray-300">
+                            Using intuitive drag-and-drop mechanics, combine different characters representing various musical elements. Each character adds unique sounds to create dynamic and engaging musical compositions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Features</h3>
+                        <p class="text-gray-300">
+                            The mod features custom-designed characters, unique sound effects, and special animations that create an immersive musical experience for players of all skill levels.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">Key Elements</h3>
+                        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                            <li>Custom sound effects</li>
+                            <li>Unique character designs</li>
+                            <li>Special animations</li>
+                            <li>Creative musical elements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Key Features</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Custom Sounds</h3>
+                    <p class="text-gray-300">Experience unique and original sound effects created specifically for Sprunki Sprunmbox.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Interactive Elements</h3>
+                    <p class="text-gray-300">Discover special combinations that unlock unique animations and bonus tracks.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dynamic Mixing</h3>
+                    <p class="text-gray-300">Create endless musical combinations with our intuitive mixing system.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">How to Play</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-indigo-400">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Choose Your Beat</h3>
+                    <p class="text-gray-300">Start with a base rhythm by selecting from our unique beat characters.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-indigo-400">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Add Elements</h3>
+                    <p class="text-gray-300">Layer musical elements by dragging characters onto the stage.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-indigo-400">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mix & Create</h3>
+                    <p class="text-gray-300">Experiment with different combinations to create your perfect mix.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-indigo-400">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Share & Enjoy</h3>
+                    <p class="text-gray-300">Record your creation and share it with others.</p>
+                </div>
+            </div>
+
+            <!-- Additional Tips -->
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Pro Tips</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Start with rhythm characters to build a solid foundation
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Mix different character types for richer compositions
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Experiment with timing and layering
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Controls</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                            </svg>
+                            Drag and drop characters to add them to your mix
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                            </svg>
+                            Click active characters to remove them
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                            </svg>
+                            Use the record button to save your mixes
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">What is Sprunki Sprunmbox?</h3>
+                    <p class="text-gray-300">Sprunki Sprunmbox is a creative modification of Incredibox that offers unique sounds and musical elements. It's designed to provide an engaging music creation experience for players of all skill levels.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">Is Sprunki Sprunmbox free to play?</h3>
+                    <p class="text-gray-300">Yes! Sprunki Sprunmbox is completely free to play online. Just visit our website and start creating music right away.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">How do I save my creations?</h3>
+                    <p class="text-gray-300">You can save your musical creations using the record feature in the game. This allows you to keep and share your favorite mixes.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">What devices can I play on?</h3>
+                    <p class="text-gray-300">Sprunki Sprunmbox works on any device with a web browser and internet connection, including computers, tablets, and smartphones.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Make Music?</h2>
+                <p class="text-xl text-gray-300 mb-8">Start your musical journey with Sprunki Sprunmbox today.</p>
+                <a href="#play" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 px-8 py-4 rounded-lg text-lg font-bold hover:opacity-90 transition">
+                    Play Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-50 hidden">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-end mb-8">
+                <button class="text-gray-400 hover:text-white" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-center text-xl">
+                <a href="#play" class="text-gray-400 hover:text-indigo-400 transition">Play Now</a>
+                <a href="#features" class="text-gray-400 hover:text-indigo-400 transition">Features</a>
+                <a href="#how-to-play" class="text-gray-400 hover:text-indigo-400 transition">How to Play</a>
+                <a href="#about" class="text-gray-400 hover:text-indigo-400 transition">About</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black/30 mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex flex-wrap justify-center gap-4 text-gray-400">
+                    <a href="/privacy-policy.html" class="hover:text-indigo-400 transition">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="/terms-of-service.html" class="hover:text-indigo-400 transition">Terms of Service</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="/contact.html" class="hover:text-indigo-400 transition">Contact Us</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="/game-dir.html" class="hover:text-indigo-600 transition">Game Directory</a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+                    <a href="/" class="hover:text-indigo-400 transition">English</a>
+                    <a href="/index-ko.html" class="hover:text-indigo-400 transition">한국어</a>
+                    <a href="/index-es.html" class="hover:text-indigo-400 transition">Español</a>
+                    <a href="/index-ar.html" class="hover:text-indigo-400 transition">日本語</a>
+                    <a href="/index-pt.html" class="hover:text-indigo-400 transition">Português</a>
+                </div>
+                <p class="text-gray-400">&copy; 2025 Sprunki Green. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Close mobile menu when clicking navigation links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Lazy load iframe
+        document.getElementById('iframe-placeholder').addEventListener('click', function() {
+            const iframe = document.getElementById('game-iframe');
+            iframe.src = 'https://wowtbc.net/sprunkin/sprunmbox/index.html';
+            iframe.classList.remove('hidden');
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
