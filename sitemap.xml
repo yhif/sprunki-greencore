@@ -1,63 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 主页 -->
   <url>
-    <loc>https://www.sprunkigreen.online</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://sprunkigreen.online/</loc>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.sprunkigreen.online/index-ko.html</loc>
-    <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
+  
+  <!-- 游戏页面 -->
   <url>
-    <loc>https://www.sprunkigreen.online/index-es.html</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://sprunkigreen.online/sprunki-sprunmbox/</loc>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sprunkigreen.online/index-ar.html</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sprunkigreen.online/index-pt.html</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.sprunkigreen.online/contact-us.html</loc>
-    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.sprunkigreen.online/terms-of-service.html</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sprunkigreen.online/privacy-policy.html</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.sprunkigreen.online/sprunki-green-gang</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://sprunkigreen.online/sprunki-greencore-padek-man/</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
-    <url>
-        <loc>https://sprunkigreen.online/game-dir.html</loc>
-        <lastmod>2025-02-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://sprunkigreen.online/sprunki-green-gang/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sprunkigreen.online/game-dir/</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <!-- 多语言页面 -->
+  <url>
+    <loc>https://sprunkigreen.online/ko/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sprunkigreen.online/ar/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://sprunkigreen.online/pt/</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- 法律页面 -->
+  <url>
+    <loc>https://sprunkigreen.online/privacy-policy/</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://sprunkigreen.online/terms-of-service/</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>

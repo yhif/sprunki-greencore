@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+Allow: /sprunki-sprunmbox/
+Allow: /sprunki-greencore-padek-man/
+Allow: /sprunki-green-gang/
+Allow: /game-dir/
+Allow: /ko/
+Allow: /ar/
+Allow: /pt/
+Allow: /es/
+Allow: /privacy-policy/
+Allow: /terms-of-service/
+
+# 禁止爬取的目录
+Disallow: /assets/
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /scripts/
+
+# 站点地图
+Sitemap: https://sprunkigreen.online/sitemap.xml

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프런키 그린코어: 자연에서 영감을 받은 음악 만들기 | sprunkigreen.online</title>
+    <meta name="description" content="스프런키 그린코어는 Incredibox의 독특한 자연에서 영감을 받은 모드로, 플레이어는 음악을 만들면서 평화로운 숲 테마의 환경에 몰입할 수 있습니다. 이 모드는 풍부한 시각 효과와 유기적인 사운드로 경험을 변화시켜 창의성과 자연의 조화로운 조화를 가능하게 합니다. 매혹적인 스프런키 그린코어의 세계를 탐험하고 녹색 속에서 음악적 상상력을 꽃피우세요!">
+    <meta name="keywords" content="스프런키 그린코어, Incredibox 모드, 자연에서 영감을 받은 음악, 숲 테마 음악 제작, 스프런키, 음악 게임, 친환경 음악 앱, 자연과 함께하는 음악 제작, 녹색 테마 Incredibox, 환경 음악 모드">
+    <meta name="author" content="스프런키 그린코어 팀">
+    <meta property="og:title" content="스프런키 그린코어: 자연에서 영감을 받은 음악 만들기 | sprunkigreen.online">
+    <meta property="og:description" content="스프런키 그린코어는 Incredibox의 독특한 자연에서 영감을 받은 모드로, 플레이어는 음악을 만들면서 평화로운 숲 테마의 환경에 몰입할 수 있습니다. 이 모드는 풍부한 시각 효과와 유기적인 사운드로 경험을 변화시켜 창의성과 자연의 조화로운 조화를 가능하게 합니다. 매혹적인 스프런키 그린코어의 세계를 탐험하고 녹색 속에서 음악적 상상력을 꽃피우세요!">
+    <meta property="og:image" content="/apple-touch-icon.png">
+    <meta property="og:url" content="https://sprunkigreen.online">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2682010394958299"
+     crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XJDQPHXK4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4XJDQPHXK4');
+    </script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4ade80, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .game-card {
+            transition: all 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 text-white min-h-screen">
+    <!-- 헤더 -->
+    <header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text"><a href="/">스프런키 그린코어</a></div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#play" class="hover:text-green-400 transition">플레이하기</a>
+                <a href="#features" class="hover:text-green-400 transition">특징</a>
+                <a href="#how-to-play" class="hover:text-green-400 transition">플레이 방법</a>
+                <a href="#about" class="hover:text-green-400 transition">소개</a>
+            </div>
+            <button class="md:hidden text-green-400" onclick="document.getElementById('mobile-menu').classList.remove('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="pt-20">
+        <!-- 히어로 섹션 -->
+        <section class="container mx-auto px-4 py-8">
+            <!-- 히어로 제목 및 부제목 -->
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">
+                    스프런키 그린코어 무료로 플레이하기
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    스프런키 그린코어는 원래 Incredibox 게임의 팬 제작 모드입니다. 이 게임은 숲 테마의 미학을 통합하여 자연에 초점을 맞춰 재구상되었습니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-12 gap-6">
+                <!-- 최신 게임 -->
+                <div class="col-span-12 md:col-span-2 bg-white/5 rounded-lg shadow-sm p-4">
+                    <h2 class="text-lg font-semibold mb-4 gradient-text">최신 게임</h2>
+                    <div class="space-y-3">
+                        <a href="https://sprunki-games.online" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-incredibox.avif" alt="최신 게임" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">스프런키 Incredibox</p>
+                        </a>
+                        <a href="https://sprunki-games.online/sprunki-retake" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-retake.avif" alt="최신 게임" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">스프런키 Retake</p>
+                        </a>
+                        <a href="/sprunki-sprunmbox" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-sprunmbox.avif" alt="최신 게임" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">스프런키 Sprunmbox</p>
+                        </a>
+                        <a href="/sprunki-green-gang" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-green-gang.avif" alt="최신 게임" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">스프런키 Green Gang</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 메인 게임 -->
+                <div class="col-span-12 md:col-span-8 bg-white/5 rounded-lg shadow-sm p-4">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <div id="iframe-placeholder" class="w-full aspect-video flex flex-col items-center justify-between py-12 bg-green-900/30 cursor-pointer relative">
+                            <img src="../img/sprunki-greencore.avif" 
+                                 alt="스프런키 그린코어 커버" 
+                                 class="w-3/5 object-contain">
+                            <div class="text-center relative z-10 bg-black/50 px-12 py-6 rounded-xl backdrop-blur-sm mt-8">
+                                <button class="text-xl font-bold text-green-400 hover:text-green-300 transition-colors">
+                                    지금 플레이하기
+                                </button>
+                            </div>
+                        </div>
+                        <iframe id="game-iframe" src="about:blank" class="w-full aspect-video hidden" frameborder="0"></iframe>
+                    </div>
+                    <div class="mt-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-semibold gradient-text">인기 게임</h3>
+                            <span class="text-sm text-green-400">12개 게임 트렌드 중</span>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <a href="https://sprunki-games.online" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="../img/sprunki-incredibox.avif" alt="인기 게임" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">인기</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">스프런키 Incredibox</p>
+                                    <p class="text-xs text-gray-400">2.5k 플레이 중</p>
+                                </div>
+                            </a>
+                            <a href="https://sprunki-games.online/sprunki-retake" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="../img/sprunki-retake.avif" alt="인기 게임" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">신규</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">스프런키 Retake</p>
+                                    <p class="text-xs text-gray-400">2.1k 플레이 중</p>
+                                </div>
+                            </a>
+                            <a href="/sprunki-sprunmbox" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="../img/sprunki-sprunmbox.avif" alt="인기 게임" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">인기</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">스프런키 Sprunmbox</p>
+                                    <p class="text-xs text-gray-400">1.8k 플레이 중</p>
+                                </div>
+                            </a>
+                            <a href="/sprunki-green-gang" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="../img/sprunki-green-gang.avif" alt="인기 게임" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">트렌드</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">스프런키 Green Gang</p>
+                                    <p class="text-xs text-gray-400">1.5k 플레이 중</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center text-sm text-gray-400">
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center">
+                                    <i class="fas fa-fire text-red-500 text-xs mr-1"></i>
+                                    인기 게임
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fas fa-star text-yellow-500 text-xs mr-1"></i>
+                                    인기 게임
+                                </span>
+                            </div>
+                            <button class="text-green-400 hover:text-green-300">
+                                모든 게임 보기 <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 인기 게임 -->
+                <div class="col-span-12 md:col-span-2 bg-white/5 rounded-lg shadow-sm p-4">
+                    <h2 class="text-lg font-semibold mb-4 gradient-text">인기 게임</h2>
+                    <div class="space-y-3">
+                        <a href="https://sprunki-games.online" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-incredibox.avif" alt="인기 게임" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">스프런키 Incredibox</p>
+                                <p class="text-xs text-gray-400">2.5k 플레이 중</p>
+                            </div>
+                        </a>
+                        <a href="https://sprunki-games.online/sprunki-retake" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-retake.avif" alt="인기 게임" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">스프런키 Retake</p>
+                                <p class="text-xs text-gray-400">2.1k 플레이 중</p>
+                            </div>
+                        </a>
+                        <a href="/sprunki-sprunmbox" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-sprunmbox.avif" alt="인기 게임" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">스프런키 Sprunmbox</p>
+                                <p class="text-xs text-gray-400">1.8k 플레이 중</p>
+                            </div>
+                        </a>
+                        <a href="/sprunki-green-gang" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="../img/sprunki-green-gang.avif" alt="인기 게임" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">스프런키 Green Gang</p>
+                                <p class="text-xs text-gray-400">1.5k 플레이 중</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 소개 섹션 -->
+        <section id="about" class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">스프런키 그린코어 소개</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- 왼쪽 열: 주요 설명 -->
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">개요</h3>
+                        <p class="text-gray-300">
+                            스프런키 그린코어는 자연과 지속 가능성에 초점을 맞춘 Incredibox의 팬 제작 모드입니다. 독특한 녹색 테마를 통해 플레이어는 음악을 만들면서 숲 같은 환경에 몰입할 수 있습니다.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">게임플레이</h3>
+                        <p class="text-gray-300">
+                            친숙한 드래그 앤 드롭 게임플레이를 사용하여 재활용, 태양광 발전 및 야생 동물 보호와 같은 친환경 개념을 나타내는 캐릭터를 결합할 수 있습니다. 각 캐릭터는 마법의 숲을 연상시키는 분위기 있는 사운드트랙을 만들기 위해 함께 어우러지는 독특한 소리를 내뿜습니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 오른쪽 열: 특징 및 시각적 요소 -->
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">시각적 디자인</h3>
+                        <p class="text-gray-300">
+                            이 모드는 무성한 녹색, 흐르는 강 및 기타 자연 요소와 함께 생생한 시각 효과를 제공하여 음악적 창의성과 환경 테마를 완벽하게 균형 잡은 초현실적이면서도 지구적인 미학을 창출합니다.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-3 gradient-text">주요 요소</h3>
+                        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                            <li>자연에서 영감을 받은 사운드 효과</li>
+                            <li>환경 친화적 캐릭터 디자인</li>
+                            <li>숲 테마 애니메이션</li>
+                            <li>친환경 시각적 요소</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 특징 섹션 -->
+        <section id="features" class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">주요 특징</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <i class="fas fa-music text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">자연에서 영감을 받은 사운드</h3>
+                    <p class="text-gray-300">바스락거리는 나뭇잎부터 흐르는 물까지 유기적인 소리를 경험하고 평화로운 숲으로 이동하는 독특한 환경 교향곡을 만드세요.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <i class="fas fa-eye text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">친환경 테마 시각 효과</h3>
+                    <p class="text-gray-300">환경 테마를 나타내는 캐릭터와 함께 생생한 녹색 세계에 몰입하여 자연의 아름다움을 생생하게 구현하세요.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <i class="fas fa-gamepad text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">상호작용 보너스</h3>
+                    <p class="text-gray-300">특별한 애니메이션과 환경 효과를 잠금 해제하는 숨겨진 조합을 발견하여 음악 제작에 흥미로운 레이어를 추가하세요.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-green-400 mb-4">
+                        <i class="fas fa-sliders-h text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">동적 믹싱</h3>
+                    <p class="text-gray-300">직관적인 믹싱 시스템으로 끝없는 음악 조합을 만드세요. 모든 캐릭터 상호 작용이 조화로운 자연에서 영감을 받은 소리를 생성합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 플레이 방법 섹션 -->
+        <section id="how-to-play" class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">플레이 방법</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">비트 선택</h3>
+                    <p class="text-gray-300">자연에서 영감을 받은 비트 캐릭터 중에서 선택하여 기본 리듬으로 시작하세요. 이들이 믹스의 기초를 형성합니다.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">멜로디 추가</h3>
+                    <p class="text-gray-300">무대에 숲 테마의 캐릭터를 드래그하여 멜로디 요소를 레이어하세요. 각 캐릭터는 작곡에 독특한 자연 소리를 추가합니다.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">믹스 & 매치</h3>
+                    <p class="text-gray-300">다양한 캐릭터 조합을 실험해 보세요. 요소를 제거하거나 추가하여 완벽한 환경 교향곡을 만들어 보세요.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-400">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">보너스 발견</h3>
+                    <p class="text-gray-300">특별한 조합을 찾아 마법 같은 애니메이션과 보너스 트랙을 잠금 해제하세요. 각 발견은 숲 걸작에 새로운 요소를 추가합니다.</p>
+                </div>
+            </div>
+        
+            <!-- 추가 팁 -->
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">프로 팁</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                            단단한 기초를 구축하기 위해 리듬 캐릭터로 시작하세요
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                            다양한 캐릭터 유형을 혼합하여 더 풍부한 작곡을 만드세요
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                            소리가 어떻게 조화되는지 주의 깊게 들어보세요
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="bg-white/5 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">컨트롤</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-mouse-pointer text-green-400 mr-2 mt-1"></i>
+                            캐릭터를 클릭하고 드래그하여 믹스에 추가하세요
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times-circle text-green-400 mr-2 mt-1"></i>
+                            활성 캐릭터를 클릭하여 제거하세요
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-save text-green-400 mr-2 mt-1"></i>
+                            레코드 버튼을 사용하여 좋아하는 믹스를 저장하세요
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ 섹션 -->
+        <section class="container mx-auto px-4 py-16 bg-white/5 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">자주 묻는 질문</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">스프런키 그린코어란 무엇인가요?</h3>
+                    <p class="text-gray-300">스프런키 그린코어는 Incredibox 팬들이 만든 재미있고 창의적인 게임입니다. 자연 테마를 가지고 있어 플레이어는 바스락거리는 나뭇잎과 흐르는 물과 같은 숲의 소리를 사용하여 음악을 만들 수 있습니다. 음악을 만들면서 차분한 기분을 느낄 수 있도록 설계되었습니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">스프런키 그린코어를 어떻게 시작하나요?</h3>
+                    <p class="text-gray-300">스프런키 그린코어를 시작하려면 먼저 웹사이트에서 게임을 선택하세요. 그런 다음 게임을 로드하기 위해 클릭하고, 좋아하는 캐릭터를 선택하여 무대에 드래그하면 자신만의 음악을 만들 수 있습니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">스프런키 그린코어를 무료로 플레이할 수 있나요?</h3>
+                    <p class="text-gray-300">네! 스프런키 그린코어는 온라인에서 비용 없이 플레이할 수 있습니다. 완전히 무료이므로 누구나 바로 참여하여 음악을 만들기 시작할 수 있습니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">내 음악 작품을 어떻게 저장하나요?</h3>
+                    <p class="text-gray-300">스프런키 그린코어에서 멋진 음악 믹스를 만들면 저장할 수 있습니다. 게임 내에 레코드 옵션이 있어 트랙을 저장하여 나중에 들을 수 있습니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">이 게임을 플레이하기 위해 어떤 기기를 사용할 수 있나요?</h3>
+                    <p class="text-gray-300">스프런키 그린코어는 많은 기기에서 즐길 수 있습니다! 인터넷 연결과 웹 브라우저만 있다면 컴퓨터, 태블릿 또는 스마트폰에서 게임에 접근할 수 있습니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">내 음악을 다른 사람들과 공유할 수 있는 곳이 있나요?</h3>
+                    <p class="text-gray-300">물론이죠! 스프런키 그린코어를 즐기는 많은 플레이어들이 Incredibox와 관련된 다양한 온라인 플랫폼과 포럼에서 자신의 음악 작품을 공유합니다. 여러분도 참여하여 믹스를 공유할 수 있습니다!</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">스프런키 그린코어에서 어떤 종류의 소리를 만들 수 있나요?</h3>
+                    <p class="text-gray-300">스프런키 그린코어에서는 다양한 자연에서 영감을 받은 소리를 사용하여 음악을 만들 수 있습니다. 게임은 각각 다른 소리를 내는 다양한 캐릭터를 특징으로 하여 탐험할 수 있는 많은 조합을 제공합니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">아이들도 스프런키 그린코어를 플레이할 수 있나요?</h3>
+                    <p class="text-gray-300">네, 스프런키 그린코어는 아이들에게 적합합니다! 이해하기 쉽고 창의성을 장려하여 아이들이 음악을 통해 자신을 표현할 수 있는 좋은 선택입니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">스프런키 그린코어가 다른 게임과 다른 점은 무엇인가요?</h3>
+                    <p class="text-gray-300">스프런키 그린코어는 자연 테마와 차분한 분위기로 인해 눈에 띕니다. 음악을 만들면서 평화로운 숲에 있는 것 같은 느낌을 받을 수 있으며, 이는 많은 다른 게임과는 상당히 다릅니다.</p>
+                </div>
+
+                <div class="bg-white/5 rounded-xl p-6 hover:bg-white/10 transition">
+                    <h3 class="text-xl font-bold mb-3">플레이 방법을 배우는 데 도움이 되는 튜토리얼이 있나요?</h3>
+                    <p class="text-gray-300">네, 스프런키 그린코어는 초보자가 플레이 방법을 배울 수 있도록 가이드를 제공합니다. 제공된 단계를 따라 음악을 쉽게 만드는 방법을 이해할 수 있어 모두가 접근할 수 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 행동 유도 -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-xl p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4">준비되셨나요?</h2>
+                <p class="text-xl text-gray-300 mb-8">오늘 스프런키 그린코어로 음악 여행을 시작하세요.</p>
+                <a href="#play" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 px-8 py-4 rounded-lg text-lg font-bold hover:opacity-90 transition">
+                    지금 플레이하기
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 모바일 메뉴 -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-50 hidden">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-end mb-8">
+                <button class="text-gray-400 hover:text-white" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-center text-xl">
+                <a href="#play" class="text-gray-400 hover:text-green-400 transition">플레이하기</a>
+                <a href="#features" class="text-gray-400 hover:text-green-400 transition">특징</a>
+                <a href="#how-to-play" class="text-gray-400 hover:text-green-400 transition">플레이 방법</a>
+                <a href="#about" class="text-gray-400 hover:text-green-400 transition">소개</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="bg-black/30 mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex flex-wrap justify-center gap-4 text-gray-400">
+                    <a href="/privacy-policy" class="hover:text-green-400 transition">개인정보 보호정책</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="/terms-of-service" class="hover:text-green-400 transition">서비스 약관</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="/contact-us" class="hover:text-green-400 transition">문의하기</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="/game-dir" class="hover:text-indigo-600 transition">게임 디렉토리</a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+                    <a href="/" class="hover:text-green-400 transition">English</a>
+                    <a href="/ko" class="hover:text-green-400 transition">한국어</a>
+                    <a href="/es" class="hover:text-green-400 transition">Español</a>
+                    <a href="/ar" class="hover:text-green-400 transition">العربية</a>
+                    <a href="/pt" class="hover:text-green-400 transition">Português</a>
+                </div>
+                <p class="text-gray-400">&copy; 2025 스프런키 그린코어. 모든 권리 보유.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 닫기
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // iframe 지연 로드
+        document.getElementById('iframe-placeholder').addEventListener('click', function() {
+            const iframe = document.getElementById('game-iframe');
+            iframe.src = 'https://wowtbc.net/sprunkin/greencore2/index.html';
+            iframe.classList.remove('hidden');
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
