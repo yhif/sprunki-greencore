@@ -30,14 +30,24 @@
       gtag('config', 'G-4XJDQPHXK4');
     </script>
   <style>
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+    .float {
+        animation: float 3s ease-in-out infinite;
+    }
+    .gradient-text {
+        background: linear-gradient(to right, #4ade80, #2dd4bf);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     /* Custom styles */
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #0a1f1c; /* Dark green background */
+      background: linear-gradient(to bottom right, #0a1f1c, #1b3a37, #0a1f1c);
       color: #e0f2f1; /* Light text color */
-    }
-    .game-font {
-      font-family: 'Press Start 2P', cursive;
     }
     .glow-button {
       background: linear-gradient(45deg, #4caf50, #81c784);
@@ -68,214 +78,334 @@
     .hover-glow:hover {
       box-shadow: 0 0 10px #4caf50;
     }
-    /* Smooth animations for the hamburger menu */
-    .nav-links {
-      position: absolute;
-      top: 100%; /* Position below the header */
-      right: 0;
-      background-color: #4caf50;
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
-      opacity: 0;
+    .game-card {
+        transition: all 0.3s ease;
     }
-    .nav-links.open {
-      max-height: 500px; /* Adjust based on content height */
-      opacity: 1;
-    }
-    .nav-links a {
-      display: block;
-      padding: 1rem;
-      text-align: center;
-      color: #e0f2f1;
-      transition: background-color 0.3s ease;
-    }
-    .nav-links a:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+    .game-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
-<body>
-  <!-- Header with Hamburger Menu -->
-  <header class="py-6 shadow-lg relative" style="background-color: #4caf50;">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-3xl md:text-4xl font-bold game-font" style="color: #e0f2f1;">Sprunki Green</h1>
-      <!-- Hamburger Menu Button -->
-      <button id="menu-toggle" class="md:hidden text-green-100 focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+<body class="bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 text-white min-h-screen">
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold gradient-text"><a href="/">Sprunki Green Gang</a></div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#play" class="hover:text-green-400 transition">Play Now</a>
+        <a href="#about" class="hover:text-green-400 transition">About</a>
+        <a href="#videos" class="hover:text-green-400 transition">Videos</a>
+        <a href="#guide" class="hover:text-green-400 transition">Guide</a>
+        <a href="#reviews" class="hover:text-green-400 transition">Reviews</a>
+        <a href="#faq" class="hover:text-green-400 transition">FAQ</a>
+      </div>
+      <button class="md:hidden text-green-400" id="menu-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
-      <!-- Navigation Links -->
-      <nav id="nav-links" class="nav-links md:flex md:space-x-6 md:max-h-none md:opacity-100 md:static md:bg-transparent md:w-auto">
-        <a href="#play" class="game-font">Play Game</a>
-        <a href="#about" class="game-font">About</a>
-        <a href="#videos" class="game-font">Videos</a>
-        <a href="#guide" class="game-font">Guide</a>
-        <a href="#reviews" class="game-font">Reviews</a>
-        <a href="#faq" class="game-font">FAQ</a>
-      </nav>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-black/80 backdrop-blur-md w-full absolute hidden">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#play" class="text-green-400 hover:text-green-300 transition">Play Now</a>
+        <a href="#about" class="text-green-400 hover:text-green-300 transition">About</a>
+        <a href="#videos" class="text-green-400 hover:text-green-300 transition">Videos</a>
+        <a href="#guide" class="text-green-400 hover:text-green-300 transition">Guide</a>
+        <a href="#reviews" class="text-green-400 hover:text-green-300 transition">Reviews</a>
+        <a href="#faq" class="text-green-400 hover:text-green-300 transition">FAQ</a>
+      </div>
     </div>
   </header>
 
-  <!-- Game IFrame Section -->
-  <section id="play" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: #e0f2f1;">Play Sprunki Green Gang for free</h2>
-      <div class="flex justify-center">
-        <div class="game-frame w-full max-w-4xl h-[600px]">
-          <iframe src="https://sprunki.org/sprunki-green-gang.embed" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
+  <!-- Main Content -->
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-8">
+      <!-- Hero Title and Subtitle -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">
+          Play Sprunki Green Gang Online For Free
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Join the eco-warriors in this rhythm-based adventure to save the environment!
+        </p>
       </div>
-      <div class="text-center mt-6">
-        <button class="glow-button text-white px-8 py-3 rounded-full game-font">Play Now</button>
-      </div>
-    </div>
-  </section>
 
-  <!-- Game Description Section -->
-  <section id="about" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: #e0f2f1;">About the Game</h2>
-      <p class="text-lg text-center max-w-2xl mx-auto">
-        Sprunki Green Gang is an innovative addition to the Sprunki series, blending environmental consciousness with rhythmic gameplay. In this vibrant world, players join an elite group of eco-warriors, each equipped with unique abilities to protect and restore nature. The game features a rhythm-based combat system where players synchronize their actions with a dynamic soundtrack, executing perfectly timed moves to maximize their powers. Players embark on diverse missions, such as restoring damaged ecosystems, protecting endangered species, and cleaning up pollution through engaging gameplay mechanics. With multiple biomes to explore—including lush rainforests, coastal regions, and urban areas—every environment responds to player actions, creating a truly interactive experience. Sprunki Green Gang not only entertains but also educates players about environmental conservation and sustainable living practices, making it a unique blend of fun and social awareness.
-      </p>
-    </div>
-  </section>
+      <div class="grid grid-cols-12 gap-6">
+        <!-- Latest Games -->
+        <div class="col-span-12 md:col-span-2 bg-white/5 rounded-lg shadow-sm p-4">
+          <h2 class="text-lg font-semibold mb-4 gradient-text">Latest Games</h2>
+          <div class="space-y-3">
+            <a href="https://sprunki-games.online" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-incredibox.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+              <p class="text-sm mt-2">Sprunki Incredibox</p>
+            </a>
+            <a href="https://sprunki-games.online/sprunki-retake" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-retake.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+              <p class="text-sm mt-2">Sprunki Retake</p>
+            </a>
+            <a href="/sprunki-sprunmbox" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-sprunmbox.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+              <p class="text-sm mt-2">Sprunki Sprunmbox</p>
+            </a>
+            <a href="/sprunki-green-gang" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-green-gang.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+              <p class="text-sm mt-2">Sprunki Green Gang</p>
+            </a>
+          </div>
+        </div>
 
-  <!-- Gameplay Videos Section -->
-  <section id="videos" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: #e0f2f1;">Watch and Learn</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="pixel-box hover-glow">
-          <iframe src="https://www.youtube.com/embed/XwqBUJd2cew?si=ZVQpfl9RjpWa8yMs" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
-          <p class="mt-4 text-center">Incredibox Sprunki Green Gang</p>
+        <!-- Main Game -->
+        <div class="col-span-12 md:col-span-8 bg-white/5 rounded-lg shadow-sm p-4">
+          <div class="aspect-w-16 aspect-h-9">
+            <div class="game-frame w-full h-[600px]">
+              <iframe src="https://sprunki.org/sprunki-green-gang.embed" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+          </div>
+          <div class="mt-6">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold gradient-text">Hot Games Now</h3>
+              <span class="text-sm text-green-400">12 games trending</span>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <a href="https://sprunki-games.online" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                <div class="relative">
+                  <img src="/img/sprunki-incredibox.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                  <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">Hot</div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm font-medium">Sprunki Incredibox</p>
+                  <p class="text-xs text-gray-400">2.5k playing</p>
+                </div>
+              </a>
+              <a href="https://sprunki-games.online/sprunki-retake" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                <div class="relative">
+                  <img src="/img/sprunki-retake.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                  <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">New</div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm font-medium">Sprunki Retake</p>
+                  <p class="text-xs text-gray-400">2.1k playing</p>
+                </div>
+              </a>
+              <a href="/sprunki-sprunmbox" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                <div class="relative">
+                  <img src="/img/sprunki-sprunmbox.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                  <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">Popular</div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm font-medium">Sprunki Sprunmbox</p>
+                  <p class="text-xs text-gray-400">1.8k playing</p>
+                </div>
+              </a>
+              <a href="/sprunki-green-gang" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                <div class="relative">
+                  <img src="/img/sprunki-green-gang.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                  <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">Trending</div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm font-medium">Sprunki Green Gang</p>
+                  <p class="text-xs text-gray-400">1.5k playing</p>
+                </div>
+              </a>
+            </div>
+            <div class="mt-4 flex justify-between items-center text-sm text-gray-400">
+              <div class="flex items-center space-x-4">
+                <span class="flex items-center">
+                  <i class="fas fa-fire text-red-500 text-xs mr-1"></i>
+                  Hot Games
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-star text-yellow-500 text-xs mr-1"></i>
+                  Popular Games
+                </span>
+              </div>
+              <button class="text-green-400 hover:text-green-300">
+                View All Games <i class="fas fa-arrow-right ml-1"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="pixel-box hover-glow">
-          <iframe src="https://www.youtube.com/embed/Pxru6QgML3c?si=CPgG5D0U8DtDSf5S" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
-          <p class="mt-4 text-center">Sprunki Green: Banana Edition | Sprunki Green Gang</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <iframe src="https://www.youtube.com/embed/U5qBgNfUkBs?si=cbeB3sRaHqediQ33" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
-          <p class="mt-4 text-center">I Challenged Myself and Entered in Green Gang mod Incredibox Sprunki</p>
+
+        <!-- Popular Games -->
+        <div class="col-span-12 md:col-span-2 bg-white/5 rounded-lg shadow-sm p-4">
+          <h2 class="text-lg font-semibold mb-4 gradient-text">Popular Games</h2>
+          <div class="space-y-3">
+            <a href="https://sprunki-games.online" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-incredibox.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+              <div class="mt-2">
+                <p class="text-sm font-medium">Sprunki Incredibox</p>
+                <p class="text-xs text-gray-400">2.5k playing</p>
+              </div>
+            </a>
+            <a href="https://sprunki-games.online/sprunki-retake" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-retake.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+              <div class="mt-2">
+                <p class="text-sm font-medium">Sprunki Retake</p>
+                <p class="text-xs text-gray-400">2.1k playing</p>
+              </div>
+            </a>
+            <a href="/sprunki-sprunmbox" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-sprunmbox.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+              <div class="mt-2">
+                <p class="text-sm font-medium">Sprunki Sprunmbox</p>
+                <p class="text-xs text-gray-400">1.8k playing</p>
+              </div>
+            </a>
+            <a href="/sprunki-green-gang" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+              <img src="/img/sprunki-green-gang.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+              <div class="mt-2">
+                <p class="text-sm font-medium">Sprunki Green Gang</p>
+                <p class="text-xs text-gray-400">1.5k playing</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Gameplay Guide Section -->
-  <section id="guide" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: #e0f2f1;">How to Play</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">1. Join the Game</h3>
-          <p>Start by selecting the Sprunki Green Gang game from the website.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">2. Choose Your Eco-Warrior</h3>
-          <p>Select one of the eco-warrior characters, each with unique abilities tailored to different environmental challenges.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">3. Learn the Controls</h3>
-          <p>Familiarize yourself with the rhythm-based combat controls to synchronize your actions with the music.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">4. Embark on Missions</h3>
-          <p>Engage in various missions that involve restoring ecosystems, cleaning up pollution, or protecting wildlife.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">5. Utilize Abilities</h3>
-          <p>Use your character's specialized abilities strategically to overcome challenges and maximize your impact on the environment.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold mb-2">6. Progress and Evolve</h3>
-          <p>As you complete missions, unlock new abilities and enhance existing ones to tackle more complex challenges.</p>
+    <!-- Game Description Section -->
+    <section id="about" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6 gradient-text">About the Game</h2>
+        <div class="bg-white/5 p-6 rounded-xl max-w-4xl mx-auto">
+          <p class="text-lg text-gray-300">
+            Sprunki Green Gang is an innovative addition to the Sprunki series, blending environmental consciousness with rhythmic gameplay. In this vibrant world, players join an elite group of eco-warriors, each equipped with unique abilities to protect and restore nature. The game features a rhythm-based combat system where players synchronize their actions with a dynamic soundtrack, executing perfectly timed moves to maximize their powers. Players embark on diverse missions, such as restoring damaged ecosystems, protecting endangered species, and cleaning up pollution through engaging gameplay mechanics. With multiple biomes to explore—including lush rainforests, coastal regions, and urban areas—every environment responds to player actions, creating a truly interactive experience. Sprunki Green Gang not only entertains but also educates players about environmental conservation and sustainable living practices, making it a unique blend of fun and social awareness.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- User Comments Section -->
-  <section id="reviews" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: #e0f2f1;">What Players Are Saying</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="pixel-box hover-glow">
-          <p>"Sprunki Green Gang is a fantastic blend of fun and education! I love how it teaches about environmental issues."</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <p>"The rhythm-based mechanics make gameplay exciting and engaging!"</p>
+    <!-- Gameplay Videos Section -->
+    <section id="videos" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6 gradient-text">Watch and Learn</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <iframe src="https://www.youtube.com/embed/XwqBUJd2cew?si=ZVQpfl9RjpWa8yMs" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+            <p class="mt-4 text-center text-gray-300">Incredibox Sprunki Green Gang</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <iframe src="https://www.youtube.com/embed/Pxru6QgML3c?si=CPgG5D0U8DtDSf5S" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+            <p class="mt-4 text-center text-gray-300">Sprunki Green: Banana Edition | Sprunki Green Gang</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <iframe src="https://www.youtube.com/embed/U5qBgNfUkBs?si=cbeB3sRaHqediQ33" class="w-full h-48 rounded-lg" frameborder="0" allowfullscreen></iframe>
+            <p class="mt-4 text-center text-gray-300">I Challenged Myself and Entered in Green Gang mod Incredibox Sprunki</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6 game-font" style="color: #e0f2f1;">FAQs</h2>
-      <div class="space-y-4">
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">What is Sprunki Green Gang?</h3>
-          <p class="mt-2">It is a rhythm-based game where players become eco-warriors tasked with protecting and restoring the environment.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">How do I play Sprunki Green Gang?</h3>
-          <p class="mt-2">Players select characters and complete missions by utilizing rhythm-based controls to execute abilities.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">Is there an educational aspect to this game?</h3>
-          <p class="mt-2">Yes, the game teaches players about environmental conservation and sustainable practices through its gameplay.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">Can I play this game on different devices?</h3>
-          <p class="mt-2">Sprunki Green Gang can be played on any device that supports web browsing.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">Are there multiplayer options available?</h3>
-          <p class="mt-2">Yes, the game features cooperative missions where players can team up for environmental challenges.</p>
-        </div>
-        <div class="pixel-box hover-glow">
-          <h3 class="text-xl font-bold">How often is new content added?</h3>
-          <p class="mt-2">The developers regularly update the game with new content, missions, and community events.</p>
+    <!-- Gameplay Guide Section -->
+    <section id="guide" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6 gradient-text">How to Play</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold mb-2 text-green-400">1. Join the Game</h3>
+            <p class="text-gray-300">Start by selecting the Sprunki Green Gang game from the website.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold mb-2 text-green-400">2. Choose Your Eco-Warrior</h3>
+            <p class="text-gray-300">Select one of the eco-warrior characters, each with unique abilities tailored to different environmental challenges.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold mb-2 text-green-400">3. Learn the Controls</h3>
+            <p class="text-gray-300">Familiarize yourself with the rhythm-based combat controls to synchronize your actions with the music.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold mb-2 text-green-400">4. Embark on Missions</h3>
+            <p class="text-gray-300">Engage in various missions that involve restoring ecosystems, cleaning up pollution, or protecting wildlife.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold mb-2 text-green-400">5. Utilize Abilities</h3>
+            <p class="text-gray-300">Use your character's specialized abilities strategically to overcome challenges and maximize your impact on the environment.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold mb-2 text-green-400">6. Progress and Evolve</h3>
+            <p class="text-gray-300">As you complete missions, unlock new abilities and enhance existing ones to tackle more complex challenges.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- User Comments Section -->
+    <section id="reviews" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6 gradient-text">What Players Are Saying</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <p class="text-gray-300">"Sprunki Green Gang is a fantastic blend of fun and education! I love how it teaches about environmental issues."</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <p class="text-gray-300">"The rhythm-based mechanics make gameplay exciting and engaging!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6 gradient-text">FAQs</h2>
+        <div class="space-y-4 max-w-4xl mx-auto">
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold text-green-400">What is Sprunki Green Gang?</h3>
+            <p class="mt-2 text-gray-300">It is a rhythm-based game where players become eco-warriors tasked with protecting and restoring the environment.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold text-green-400">How do I play Sprunki Green Gang?</h3>
+            <p class="mt-2 text-gray-300">Players select characters and complete missions by utilizing rhythm-based controls to execute abilities.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold text-green-400">Is there an educational aspect to this game?</h3>
+            <p class="mt-2 text-gray-300">Yes, the game teaches players about environmental conservation and sustainable practices through its gameplay.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold text-green-400">Can I play this game on different devices?</h3>
+            <p class="mt-2 text-gray-300">Sprunki Green Gang can be played on any device that supports web browsing.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold text-green-400">Are there multiplayer options available?</h3>
+            <p class="mt-2 text-gray-300">Yes, the game features cooperative missions where players can team up for environmental challenges.</p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl game-card">
+            <h3 class="text-xl font-bold text-green-400">How often is new content added?</h3>
+            <p class="mt-2 text-gray-300">The developers regularly update the game with new content, missions, and community events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="py-8" style="background-color: #4caf50;">
+  <footer class="bg-black/30 backdrop-blur-md py-8">
     <div class="container mx-auto px-4 text-center">
-      <p class="game-font" style="color: #e0f2f1;">&copy; 2025 Sprunki Green. All rights reserved.</p>
+      <p class=" text-green-400">&copy; 2025 Sprunki Green. All rights reserved.</p>
       <div class="mt-4 space-x-4">
-        <a href="/" class="game-font inline-block" style="color: var(--text);margin-right: 1rem;">sprunkigreen.online</a>
-        <a href="/terms-of-service" class="game-font" style="color: #e0f2f1;">Terms of Service</a>
-        <a href="/privacy-policy" class="game-font" style="color: #e0f2f1;">Privacy Policy</a>
-        <a href="/contact-us" class="game-font" style="color: #e0f2f1;">Contact Us</a>
-      </div>
-      <div class="mt-4 flex justify-center space-x-6">
-        <a href="#" class="game-font" style="color: #e0f2f1;">Twitter</a>
-        <a href="#" class="game-font" style="color: #e0f2f1;">Facebook</a>
-        <a href="#" class="game-font" style="color: #e0f2f1;">Instagram</a>
+        <a href="/" class=" inline-block text-gray-300 hover:text-green-400 transition">sprunkigreen.online</a>
+        <a href="/terms-of-service" class=" text-gray-300 hover:text-green-400 transition">Terms of Service</a>
+        <a href="/privacy-policy" class=" text-gray-300 hover:text-green-400 transition">Privacy Policy</a>
+        <a href="/contact-us" class=" text-gray-300 hover:text-green-400 transition">Contact Us</a>
       </div>
     </div>
   </footer>
 
   <script>
     const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+    const mobileMenu = document.getElementById('mobile-menu');
 
     menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      mobileMenu.classList.toggle('hidden');
     });
 
     // Close the menu when clicking outside
     document.addEventListener('click', (event) => {
-      if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
-        navLinks.classList.remove('open');
+      if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
       }
     });
   </script>

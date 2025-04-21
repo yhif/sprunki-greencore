@@ -74,90 +74,155 @@
     <!-- Main Content -->
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="container mx-auto px-4 py-16 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">
-                Play Sprunki Sprunmbox Online For Free
-            </h1>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Sprunki Sprunmbox is a creative modification of Incredibox, featuring unique sounds and innovative musical elements. Mix, create, and share your musical masterpieces in this engaging rhythm game.
-            </p>
-            <a href="#play" class="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 px-8 py-4 rounded-lg text-lg font-bold hover:opacity-90 transition float">
-                Play Now
-            </a>
-        </section>
+        <section class="container mx-auto px-4 py-8">
+            <!-- Hero Title and Subtitle -->
+            <div class="text-center mb-8">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">
+                    Play Sprunki Sprunmbox Online For Free
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Sprunki Sprunmbox is a creative modification of Incredibox, featuring unique sounds and innovative musical elements. Mix, create, and share your musical masterpieces in this engaging rhythm game.
+                </p>
+            </div>
 
-        <!-- Game Section -->
-        <section id="play" class="container mx-auto px-4 py-8">
-            <div class="bg-black/30 rounded-xl overflow-hidden shadow-2xl">
-                <div id="iframe-placeholder" class="w-full aspect-video flex flex-col items-center justify-between py-12 bg-indigo-900/30 cursor-pointer relative">
-                    <!-- Add cover image -->
-                    <img src="/img/sprunki-sprunmbox.avif" 
-                         alt="Sprunki Sprunmbox Cover" 
-                         class="w-3/5 object-contain">
-                    <!-- Play button -->
-                    <div class="text-center relative z-10 bg-black/50 px-12 py-6 rounded-xl backdrop-blur-sm mt-8">
-                        <button class="text-xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
-                            Play Now
-                        </button>
+            <div class="grid grid-cols-12 gap-6">
+                <!-- Latest Games -->
+                <div class="col-span-12 md:col-span-2 bg-white/5 rounded-lg shadow-sm p-4">
+                    <h2 class="text-lg font-semibold mb-4 gradient-text">Latest Games</h2>
+                    <div class="space-y-3">
+                        <a href="https://sprunki-games.online" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-incredibox.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">Sprunki Incredibox</p>
+                        </a>
+                        <a href="https://sprunki-games.online/sprunki-retake" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-retake.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">Sprunki Retake</p>
+                        </a>
+                        <a href="/sprunki-sprunmbox" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-sprunmbox.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">Sprunki Sprunmbox</p>
+                        </a>
+                        <a href="/sprunki-green-gang" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-green-gang.avif" alt="Latest Game" class="w-full h-24 object-cover rounded">
+                            <p class="text-sm mt-2">Sprunki Green Gang</p>
+                        </a>
                     </div>
                 </div>
-                <iframe id="game-iframe" src="about:blank" class="w-full aspect-video hidden" frameborder="0"></iframe>
-            </div>
-        </section>
 
-        <!-- Popular Games Section -->
-        <section class="container mx-auto px-4 py-8">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold gradient-text">Popular Games</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="https://sprunki-games.online" class="bg-white/5 rounded-lg p-3 game-card">
-                    <div class="relative">
-                        <img src="/img/sprunki-incredibox.avif">
-                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                <!-- Main Game -->
+                <div class="col-span-12 md:col-span-8 bg-white/5 rounded-lg shadow-sm p-4">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <div id="iframe-placeholder" class="w-full aspect-video flex flex-col items-center justify-between py-12 bg-indigo-900/30 cursor-pointer relative">
+                            <img src="/img/sprunki-sprunmbox.avif" 
+                                 alt="Sprunki Sprunmbox Cover" 
+                                 class="w-3/5 object-contain">
+                            <div class="text-center relative z-10 bg-black/50 px-12 py-6 rounded-xl backdrop-blur-sm mt-8">
+                                <button class="text-xl font-bold text-indigo-400 hover:text-indigo-300 transition-colors">
+                                    Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <iframe id="game-iframe" src="about:blank" class="w-full aspect-video hidden" frameborder="0"></iframe>
                     </div>
-                    <h3 class="font-bold text-sm mb-1">Sprunki Incredibox</h3>
-                    <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400">2.5K Playing</p>
-                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
+                    <div class="mt-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-semibold gradient-text">Hot Games Now</h3>
+                            <span class="text-sm text-indigo-400">12 games trending</span>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <a href="https://sprunki-games.online" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="/img/sprunki-incredibox.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full">Hot</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">Sprunki Incredibox</p>
+                                    <p class="text-xs text-gray-400">2.5k playing</p>
+                                </div>
+                            </a>
+                            <a href="https://sprunki-games.online/sprunki-retake" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="/img/sprunki-retake.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full">New</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">Sprunki Retake</p>
+                                    <p class="text-xs text-gray-400">2.1k playing</p>
+                                </div>
+                            </a>
+                            <a href="/sprunki-greencore" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="/img/sprunki-greencore.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full">Popular</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">Sprunki GreenCore</p>
+                                    <p class="text-xs text-gray-400">1.8k playing</p>
+                                </div>
+                            </a>
+                            <a href="/sprunki-green-gang" class="bg-white/5 p-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <div class="relative">
+                                    <img src="/img/sprunki-green-gang.avif" alt="Hot Game" class="w-full h-24 object-cover rounded-lg">
+                                    <div class="absolute top-2 right-2 bg-indigo-500 text-white text-xs px-2 py-1 rounded-full">Trending</div>
+                                </div>
+                                <div class="mt-2">
+                                    <p class="text-sm font-medium">Sprunki Green Gang</p>
+                                    <p class="text-xs text-gray-400">1.5k playing</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center text-sm text-gray-400">
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center">
+                                    <i class="fas fa-fire text-red-500 text-xs mr-1"></i>
+                                    Hot Games
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fas fa-star text-yellow-500 text-xs mr-1"></i>
+                                    Popular Games
+                                </span>
+                            </div>
+                            <button class="text-indigo-400 hover:text-indigo-300">
+                                View All Games <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
                     </div>
-                </a>
+                </div>
 
-                <a href="https://sprunki-games.online/sprunki-retake" class="bg-white/5 rounded-lg p-3 game-card">
-                    <div class="relative">
-                        <img src="/img/sprunki-retake.avif">
-                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
+                <!-- Popular Games -->
+                <div class="col-span-12 md:col-span-2 bg-white/5 rounded-lg shadow-sm p-4">
+                    <h2 class="text-lg font-semibold mb-4 gradient-text">Popular Games</h2>
+                    <div class="space-y-3">
+                        <a href="https://sprunki-games.online" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-incredibox.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">Sprunki Incredibox</p>
+                                <p class="text-xs text-gray-400">2.5k playing</p>
+                            </div>
+                        </a>
+                        <a href="https://sprunki-games.online/sprunki-retake" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-retake.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">Sprunki Retake</p>
+                                <p class="text-xs text-gray-400">2.1k playing</p>
+                            </div>
+                        </a>
+                        <a href="/sprunki-greencore" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-greencore.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">Sprunki GreenCore</p>
+                                <p class="text-xs text-gray-400">1.8k playing</p>
+                            </div>
+                        </a>
+                        <a href="/sprunki-green-gang" class="block p-2 hover:bg-white/10 rounded cursor-pointer">
+                            <img src="/img/sprunki-green-gang.avif" alt="Popular Game" class="w-full h-24 object-cover rounded">
+                            <div class="mt-2">
+                                <p class="text-sm font-medium">Sprunki Green Gang</p>
+                                <p class="text-xs text-gray-400">1.5k playing</p>
+                            </div>
+                        </a>
                     </div>
-                    <h3 class="font-bold text-sm mb-1">Sprunki Retake</h3>
-                    <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400">2.1K Playing</p>
-                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
-                    </div>
-                </a>
-
-                <a href="/sprunki-greencore" class="bg-white/5 rounded-lg p-3 game-card">
-                    <div class="relative">
-                        <img src="/img/sprunki-greencore.avif">
-                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
-                    </div>
-                    <h3 class="font-bold text-sm mb-1">Sprunki GreenCore</h3>
-                    <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400">1.8K Playing</p>
-                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
-                    </div>
-                </a>
-
-                <a href="/sprunki-green-gang" class="bg-white/5 rounded-lg p-3 game-card">
-                    <div class="relative">
-                        <img src="/img/sprunki-green-gang.avif">
-                        <span class="absolute top-2 right-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">HOT</span>
-                    </div>
-                    <h3 class="font-bold text-sm mb-1">Sprunki Green Gang</h3>
-                    <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400">1.5K Playing</p>
-                        <span class="text-xs bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">Music</span>
-                    </div>
-                </a>
+                </div>
             </div>
         </section>
 
@@ -232,6 +297,58 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">Dynamic Mixing</h3>
                     <p class="text-gray-300">Create endless musical combinations with our intuitive mixing system.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Share Your Creations</h3>
+                    <p class="text-gray-300">Record and share your musical masterpieces with friends and the Sprunki community.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 mt-8">
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Customizable Experience</h3>
+                    <p class="text-gray-300">Adjust settings and preferences to create your perfect musical environment.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Special Achievements</h3>
+                    <p class="text-gray-300">Unlock special achievements and rewards as you discover new combinations and create music.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mobile Friendly</h3>
+                    <p class="text-gray-300">Create music on the go with our responsive design that works on all devices.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl game-card">
+                    <div class="text-indigo-400 mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Global Community</h3>
+                    <p class="text-gray-300">Join a worldwide community of music creators and share inspiration with fellow artists.</p>
                 </div>
             </div>
         </section>
